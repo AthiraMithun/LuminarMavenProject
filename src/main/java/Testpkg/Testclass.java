@@ -1,11 +1,9 @@
 package Testpkg;
 
 import org.testng.annotations.Test;
-
 import Basepkg.Baseclass;
 import Pagepkg.Pageclass;
 import Utilitypkg.Utilonly;
-
 
 public class Testclass extends Baseclass
 {
@@ -13,7 +11,7 @@ public class Testclass extends Baseclass
 	public void Test1() throws Exception
 	{
 		Pageclass ob=new Pageclass(driver);
-		String excel="C:\\Users\\marc\\OneDrive\\Desktop\\gitfolder\\Project\\ProjectOnly.xlsx";
+		String excel="C:\\Users\\marc\\OneDrive\\Desktop\\Onlydata\\testdataonly.xlsx";
 		String sheet="Sheet1";
 		int rowCount=Utilonly.getRowCount(excel,sheet);
 		for(int i=1;i<=rowCount;i++)

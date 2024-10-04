@@ -9,7 +9,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -37,9 +36,7 @@ public class Pageclass {
 	
 	@FindBy(id="search_query")
 	WebElement onlysearch;
-//	@FindBy(xpath="//*[@id=\"carousel-417784\"]/div[1]/div/div[5]/a/img")
-//	WebElement top;
-	@FindBy(xpath="//*[@id=\"input-option1593048\"]/div[2]/label[1]")
+	@FindBy(xpath="/html/body/div[4]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/div/div[4]/label[1]")
 	WebElement size;
 	@FindBy(id="button-cart")
 	WebElement addcart;
@@ -96,7 +93,7 @@ public class Pageclass {
 		js.executeScript("window.scrollBy(0,250)", "");
 		System.out.println("ADD TO CART BUTTON CLICK");
 		addcart.click();
-			
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));		
 		driver.findElement(By.id("cart")).click();
 		System.out.println("CLICK THE CART ICON");
 		System.out.println("DROPDOWN CHOOSE 4 AS QUANTITY");

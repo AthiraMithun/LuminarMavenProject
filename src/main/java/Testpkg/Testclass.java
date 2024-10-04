@@ -38,5 +38,6 @@ public class Testclass extends Baseclass
 		ob.cart();
 		ob.screenshot();
 		ob.home();
+		driver.quit();
 	}
 }
